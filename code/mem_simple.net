@@ -1,0 +1,5 @@
+* Linear Memristor Subcircuit Example
+.subckt memristor_simple in out PARAMS: R=100k
+R1 in out {R}
+.ends memristor
+.end

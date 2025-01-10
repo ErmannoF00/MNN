@@ -1,0 +1,13 @@
+*differential circuit to combine erxxn and erxxp
+.include UniversalOpAmp1.lib
+
+.subckt diff_sub inn inp vdd vss out PARAMS: Ra=1k Rb=1k
+
+*input resistors
+Xop0 0 inp vdd vss n001 level1
+R0 inp n001 R={Ra}
+R1 n001 inn R={Ra}
+Xop1 0 inn vdd vss out level1
+R2 inn out R={Rb}
+
+.ends

@@ -1,0 +1,21 @@
+*An attempt to introduce non linearoty to our model
+.subckt memristor_simple in out
+
+* Define parameters for the memristor model: ron (on resistance), roff (off resistance), and R (initial):
+.params ron=100.7 roff=12.6e3 R=17803.4 
+
+* Voltage-controlled current source to simulate the memristive behavior:
+G2 0 out value={(R * V(in) * V(out))}
+
+* Voltage-controlled current source representing the memristor's state-dependent resistance
+G1 in out value={(V(in) / (ron * V(out) + roff * (-V(out) + 1)))}  
+
+.ends memristor_simple 
+
+
+*Simplified version of the memristor model of the following paper:
+*V. Mladenov and S. Kirilov, "An Improved Memristor Model and Applications," 
+*2023 12th International Conference 
+*on Modern Circuits and Systems Technologies (MOCAST), 
+*Athens, Greece, 2023, pp. 1-4, doi: 10.1109/MOCAST57943.2023.10176507.
+

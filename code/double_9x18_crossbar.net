@@ -1,0 +1,419 @@
+* implementation of the 9x18 crossbar circuit
+.include mem_simple.net
+.include diff_sub.net
+
+Vvin0 in00 0 DC=-0.1
+Vvin1 in01 0 DC=0.1
+Vvin2 in02 0 DC=0.1
+Vvin3 in03 0 DC=-0.1
+Vvin4 in04 0 DC=-0.1
+Vvin5 in05 0 DC=-0.1
+Vvin6 in06 0 DC=0.1
+Vvin7 in07 0 DC=-0.1
+Vvin8 in08 0 DC=-0.1
+
+*Layer1 crossbar
+Xmem00_00 in00 er00n memristor_simple PARAMS: R=108539.51183160597
+Xmem00_01 in00 er00p memristor_simple PARAMS: R=79502.30367546245
+Xmem00_02 in00 er01n memristor_simple PARAMS: R=108577.61616945054
+Xmem00_03 in00 er01p memristor_simple PARAMS: R=17989.90293149044
+Xmem00_04 in00 er02n memristor_simple PARAMS: R=183365.307077925
+Xmem00_05 in00 er02p memristor_simple PARAMS: R=39900.77006400484
+Xmem00_06 in00 er03n memristor_simple PARAMS: R=193115.84316696206
+Xmem00_07 in00 er03p memristor_simple PARAMS: R=168616.75043595224
+Xmem00_08 in00 er04n memristor_simple PARAMS: R=53325.67141127656
+Xmem00_09 in00 er04p memristor_simple PARAMS: R=182030.25792134376
+Xmem00_10 in00 er05n memristor_simple PARAMS: R=118261.52753350702
+Xmem00_11 in00 er05p memristor_simple PARAMS: R=44685.6820530677
+Xmem00_12 in00 er06n memristor_simple PARAMS: R=191635.68380472958
+Xmem00_13 in00 er06p memristor_simple PARAMS: R=142232.2067305404
+Xmem00_14 in00 er07n memristor_simple PARAMS: R=185931.82243360195
+Xmem00_15 in00 er07p memristor_simple PARAMS: R=125619.25623079749
+Xmem00_16 in00 er08n memristor_simple PARAMS: R=150377.65937640512
+Xmem00_17 in00 er08p memristor_simple PARAMS: R=109871.26365890221
+
+Xmem01_00 in01 er00n memristor_simple PARAMS: R=184780.96297631427
+Xmem01_01 in01 er00p memristor_simple PARAMS: R=183751.4947916416
+Xmem01_02 in01 er01n memristor_simple PARAMS: R=198427.83555059574
+Xmem01_03 in01 er01p memristor_simple PARAMS: R=143302.0093564339
+Xmem01_04 in01 er02n memristor_simple PARAMS: R=32061.50968964063
+Xmem01_05 in01 er02p memristor_simple PARAMS: R=23269.4831883056
+Xmem01_06 in01 er03n memristor_simple PARAMS: R=11308.678595804658
+Xmem01_07 in01 er03p memristor_simple PARAMS: R=16084.553808273857
+Xmem01_08 in01 er04n memristor_simple PARAMS: R=153330.27713537903
+Xmem01_09 in01 er04p memristor_simple PARAMS: R=194939.75708680568
+Xmem01_10 in01 er05n memristor_simple PARAMS: R=33161.63856645288
+Xmem01_11 in01 er05p memristor_simple PARAMS: R=129353.59586401584
+Xmem01_12 in01 er06n memristor_simple PARAMS: R=148522.44171894027
+Xmem01_13 in01 er06p memristor_simple PARAMS: R=12356.771520826489
+Xmem01_14 in01 er07n memristor_simple PARAMS: R=19850.65165340911
+Xmem01_15 in01 er07p memristor_simple PARAMS: R=7750.748653826073
+Xmem01_16 in01 er08n memristor_simple PARAMS: R=142104.8875913649
+Xmem01_17 in01 er08p memristor_simple PARAMS: R=137610.37031847832
+
+Xmem02_00 in02 er00n memristor_simple PARAMS: R=137489.79720406458
+Xmem02_01 in02 er00p memristor_simple PARAMS: R=68383.64041385107
+Xmem02_02 in02 er01n memristor_simple PARAMS: R=117173.93878390612
+Xmem02_03 in02 er01p memristor_simple PARAMS: R=165913.6177630278
+Xmem02_04 in02 er02n memristor_simple PARAMS: R=14184.633139857411
+Xmem02_05 in02 er02p memristor_simple PARAMS: R=136664.5144137948
+Xmem02_06 in02 er03n memristor_simple PARAMS: R=129736.45114679862
+Xmem02_07 in02 er03p memristor_simple PARAMS: R=10655.896843629991
+Xmem02_08 in02 er04n memristor_simple PARAMS: R=115131.66462197668
+Xmem02_09 in02 er04p memristor_simple PARAMS: R=109967.9687188951
+Xmem02_10 in02 er05n memristor_simple PARAMS: R=77240.45221435296
+Xmem02_11 in02 er05p memristor_simple PARAMS: R=141028.18356908154
+Xmem02_12 in02 er06n memristor_simple PARAMS: R=148886.6262544163
+Xmem02_13 in02 er06p memristor_simple PARAMS: R=726.4546879400493
+Xmem02_14 in02 er07n memristor_simple PARAMS: R=78502.71101745883
+Xmem02_15 in02 er07p memristor_simple PARAMS: R=5223.1154166490105
+Xmem02_16 in02 er08n memristor_simple PARAMS: R=178940.5141010587
+Xmem02_17 in02 er08p memristor_simple PARAMS: R=196952.8535914247
+
+Xmem03_00 in03 er00n memristor_simple PARAMS: R=56695.566715273475
+Xmem03_01 in03 er00p memristor_simple PARAMS: R=5681.2075230313385
+Xmem03_02 in03 er01n memristor_simple PARAMS: R=197339.71666202336
+Xmem03_03 in03 er01p memristor_simple PARAMS: R=126285.50449264213
+Xmem03_04 in03 er02n memristor_simple PARAMS: R=123468.25085985742
+Xmem03_05 in03 er02p memristor_simple PARAMS: R=84206.03570333136
+Xmem03_06 in03 er03n memristor_simple PARAMS: R=125764.24829252827
+Xmem03_07 in03 er03p memristor_simple PARAMS: R=77714.66643531519
+Xmem03_08 in03 er04n memristor_simple PARAMS: R=78832.32084295922
+Xmem03_09 in03 er04p memristor_simple PARAMS: R=173087.5251824411
+Xmem03_10 in03 er05n memristor_simple PARAMS: R=43921.73037801606
+Xmem03_11 in03 er05p memristor_simple PARAMS: R=5807.398601238044
+Xmem03_12 in03 er06n memristor_simple PARAMS: R=31264.821173310716
+Xmem03_13 in03 er06p memristor_simple PARAMS: R=161688.7045142182
+Xmem03_14 in03 er07n memristor_simple PARAMS: R=193866.2955720319
+Xmem03_15 in03 er07p memristor_simple PARAMS: R=189488.53713311697
+Xmem03_16 in03 er08n memristor_simple PARAMS: R=173136.28886460268
+Xmem03_17 in03 er08p memristor_simple PARAMS: R=124357.3273029118
+
+Xmem04_00 in04 er00n memristor_simple PARAMS: R=46549.72809795409
+Xmem04_01 in04 er00p memristor_simple PARAMS: R=104719.47740717226
+Xmem04_02 in04 er01n memristor_simple PARAMS: R=34234.37854513159
+Xmem04_03 in04 er01p memristor_simple PARAMS: R=35166.81089566515
+Xmem04_04 in04 er02n memristor_simple PARAMS: R=69329.01680812633
+Xmem04_05 in04 er02p memristor_simple PARAMS: R=184961.12538436052
+Xmem04_06 in04 er03n memristor_simple PARAMS: R=105069.76990359683
+Xmem04_07 in04 er03p memristor_simple PARAMS: R=46693.81794936673
+Xmem04_08 in04 er04n memristor_simple PARAMS: R=123576.22034937123
+Xmem04_09 in04 er04p memristor_simple PARAMS: R=85626.02247992763
+Xmem04_10 in04 er05n memristor_simple PARAMS: R=174672.86435340418
+Xmem04_11 in04 er05p memristor_simple PARAMS: R=37845.06821804272
+Xmem04_12 in04 er06n memristor_simple PARAMS: R=88034.20495308141
+Xmem04_13 in04 er06p memristor_simple PARAMS: R=56656.52624457497
+Xmem04_14 in04 er07n memristor_simple PARAMS: R=53037.3442067595
+Xmem04_15 in04 er07p memristor_simple PARAMS: R=122554.82318715836
+Xmem04_16 in04 er08n memristor_simple PARAMS: R=4979.5822307938615
+Xmem04_17 in04 er08p memristor_simple PARAMS: R=196243.0097926677
+
+Xmem05_00 in05 er00n memristor_simple PARAMS: R=154672.62344202193
+Xmem05_01 in05 er00p memristor_simple PARAMS: R=120385.32849646831
+Xmem05_02 in05 er01n memristor_simple PARAMS: R=92421.15587148195
+Xmem05_03 in05 er01p memristor_simple PARAMS: R=198019.47601573612
+Xmem05_04 in05 er02n memristor_simple PARAMS: R=84787.70858420286
+Xmem05_05 in05 er02p memristor_simple PARAMS: R=142316.57109417638
+Xmem05_06 in05 er03n memristor_simple PARAMS: R=15042.257170634977
+Xmem05_07 in05 er03p memristor_simple PARAMS: R=190583.2747454316
+Xmem05_08 in05 er04n memristor_simple PARAMS: R=70897.66254156298
+Xmem05_09 in05 er04p memristor_simple PARAMS: R=89863.40712663591
+Xmem05_10 in05 er05n memristor_simple PARAMS: R=194135.51356621744
+Xmem05_11 in05 er05p memristor_simple PARAMS: R=87134.66721074765
+Xmem05_12 in05 er06n memristor_simple PARAMS: R=88632.32585902962
+Xmem05_13 in05 er06p memristor_simple PARAMS: R=47399.670888454486
+Xmem05_14 in05 er07n memristor_simple PARAMS: R=154954.6339385419
+Xmem05_15 in05 er07p memristor_simple PARAMS: R=88192.15151961698
+Xmem05_16 in05 er08n memristor_simple PARAMS: R=45078.29201210776
+Xmem05_17 in05 er08p memristor_simple PARAMS: R=125835.43576671429
+
+Xmem06_00 in06 er00n memristor_simple PARAMS: R=118215.95833739091
+Xmem06_01 in06 er00p memristor_simple PARAMS: R=30803.30586860979
+Xmem06_02 in06 er01n memristor_simple PARAMS: R=103584.51271172812
+Xmem06_03 in06 er01p memristor_simple PARAMS: R=158771.33564354866
+Xmem06_04 in06 er02n memristor_simple PARAMS: R=6521.99452521822
+Xmem06_05 in06 er02p memristor_simple PARAMS: R=166863.34121589997
+Xmem06_06 in06 er03n memristor_simple PARAMS: R=1810.7480911771543
+Xmem06_07 in06 er03p memristor_simple PARAMS: R=18333.615197078827
+Xmem06_08 in06 er04n memristor_simple PARAMS: R=145502.49517618553
+Xmem06_09 in06 er04p memristor_simple PARAMS: R=34979.280130336876
+Xmem06_10 in06 er05n memristor_simple PARAMS: R=136282.23690203202
+Xmem06_11 in06 er05p memristor_simple PARAMS: R=51816.488951475556
+Xmem06_12 in06 er06n memristor_simple PARAMS: R=95433.58638127721
+Xmem06_13 in06 er06p memristor_simple PARAMS: R=16675.169700950613
+Xmem06_14 in06 er07n memristor_simple PARAMS: R=155015.41182880715
+Xmem06_15 in06 er07p memristor_simple PARAMS: R=88903.77840794309
+Xmem06_16 in06 er08n memristor_simple PARAMS: R=95437.00218481952
+Xmem06_17 in06 er08p memristor_simple PARAMS: R=147072.7312909278
+
+Xmem07_00 in07 er00n memristor_simple PARAMS: R=197926.08953028286
+Xmem07_01 in07 er00p memristor_simple PARAMS: R=117945.93037809394
+Xmem07_02 in07 er01n memristor_simple PARAMS: R=199742.4447704559
+Xmem07_03 in07 er01p memristor_simple PARAMS: R=178031.4698515866
+Xmem07_04 in07 er02n memristor_simple PARAMS: R=71695.73820939094
+Xmem07_05 in07 er02p memristor_simple PARAMS: R=130054.01170450142
+Xmem07_06 in07 er03n memristor_simple PARAMS: R=179059.7879906096
+Xmem07_07 in07 er03p memristor_simple PARAMS: R=18224.73817548486
+Xmem07_08 in07 er04n memristor_simple PARAMS: R=134201.0585890908
+Xmem07_09 in07 er04p memristor_simple PARAMS: R=48596.9452889893
+Xmem07_10 in07 er05n memristor_simple PARAMS: R=78453.51192753905
+Xmem07_11 in07 er05p memristor_simple PARAMS: R=75825.02050413025
+Xmem07_12 in07 er06n memristor_simple PARAMS: R=116570.70434313963
+Xmem07_13 in07 er06p memristor_simple PARAMS: R=36250.73134710401
+Xmem07_14 in07 er07n memristor_simple PARAMS: R=189369.25347714228
+Xmem07_15 in07 er07p memristor_simple PARAMS: R=40331.24219422641
+Xmem07_16 in07 er08n memristor_simple PARAMS: R=125394.45507453251
+Xmem07_17 in07 er08p memristor_simple PARAMS: R=155643.17571231502
+
+Xmem08_00 in08 er00n memristor_simple PARAMS: R=58019.14472057745
+Xmem08_01 in08 er00p memristor_simple PARAMS: R=15559.588999452337
+Xmem08_02 in08 er01n memristor_simple PARAMS: R=36405.60596269811
+Xmem08_03 in08 er01p memristor_simple PARAMS: R=84570.93679019445
+Xmem08_04 in08 er02n memristor_simple PARAMS: R=145899.72138501905
+Xmem08_05 in08 er02p memristor_simple PARAMS: R=84084.78021703886
+Xmem08_06 in08 er03n memristor_simple PARAMS: R=12631.26914726844
+Xmem08_07 in08 er03p memristor_simple PARAMS: R=12264.200551658203
+Xmem08_08 in08 er04n memristor_simple PARAMS: R=99679.15266275265
+Xmem08_09 in08 er04p memristor_simple PARAMS: R=98256.20578069823
+Xmem08_10 in08 er05n memristor_simple PARAMS: R=129144.76486245282
+Xmem08_11 in08 er05p memristor_simple PARAMS: R=74873.05262622015
+Xmem08_12 in08 er06n memristor_simple PARAMS: R=187373.23873586368
+Xmem08_13 in08 er06p memristor_simple PARAMS: R=114941.0572410317
+Xmem08_14 in08 er07n memristor_simple PARAMS: R=176756.21245572704
+Xmem08_15 in08 er07p memristor_simple PARAMS: R=24134.64297743774
+Xmem08_16 in08 er08n memristor_simple PARAMS: R=137373.56495365163
+Xmem08_17 in08 er08p memristor_simple PARAMS: R=193015.76132687333
+
+Xmem09_00 bias-1 er00n memristor_simple PARAMS: R=94727.63141238663
+Xmem09_01 bias-1 er00p memristor_simple PARAMS: R=86919.18826056182
+Xmem09_02 bias-1 er01n memristor_simple PARAMS: R=89304.8813014772
+Xmem09_03 bias-1 er01p memristor_simple PARAMS: R=148555.37126052816
+Xmem09_04 bias-1 er02n memristor_simple PARAMS: R=75968.43765336392
+Xmem09_05 bias-1 er02p memristor_simple PARAMS: R=17647.11220235162
+Xmem09_06 bias-1 er03n memristor_simple PARAMS: R=81024.11793384922
+Xmem09_07 bias-1 er03p memristor_simple PARAMS: R=13092.528195442288
+Xmem09_08 bias-1 er04n memristor_simple PARAMS: R=111146.38480845858
+Xmem09_09 bias-1 er04p memristor_simple PARAMS: R=72748.96886873305
+Xmem09_10 bias-1 er05n memristor_simple PARAMS: R=138993.77683302076
+Xmem09_11 bias-1 er05p memristor_simple PARAMS: R=140016.9171246887
+Xmem09_12 bias-1 er06n memristor_simple PARAMS: R=77398.55850234789
+Xmem09_13 bias-1 er06p memristor_simple PARAMS: R=93777.27860561169
+Xmem09_14 bias-1 er07n memristor_simple PARAMS: R=73344.86486707801
+Xmem09_15 bias-1 er07p memristor_simple PARAMS: R=143755.3393126294
+Xmem09_16 bias-1 er08n memristor_simple PARAMS: R=37422.6255844899
+Xmem09_17 bias-1 er08p memristor_simple PARAMS: R=31186.653791040975
+*Output of Layer 1 after opamp
+*diff_sub inn inp vdd vss out
+*output pins: er01, er02, … er08
+Xdiff00 er00n er00p 0.5 -0.5 er00 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff01 er01n er01p 0.5 -0.5 er01 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff02 er02n er02p 0.5 -0.5 er02 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff03 er03n er03p 0.5 -0.5 er03 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff04 er04n er04p 0.5 -0.5 er04 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff05 er05n er05p 0.5 -0.5 er05 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff06 er06n er06p 0.5 -0.5 er06 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff07 er07n er07p 0.5 -0.5 er07 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff08 er08n er08p 0.5 -0.5 er08 diff_sub PARAMS: Ra=1k Rb=1k
+
+*Layer 2 Crossbar
+Xmem10_00 er08 er10n memristor_simple PARAMS: R=93351.89796912111
+Xmem10_01 er08 er10p memristor_simple PARAMS: R=48121.97664844281
+Xmem10_02 er08 er11n memristor_simple PARAMS: R=147445.23904991403
+Xmem10_03 er08 er11p memristor_simple PARAMS: R=47930.28201539206
+Xmem10_04 er08 er12n memristor_simple PARAMS: R=94080.24722908704
+Xmem10_05 er08 er12p memristor_simple PARAMS: R=36333.6724674014
+Xmem10_06 er08 er13n memristor_simple PARAMS: R=125708.92855958994
+Xmem10_07 er08 er13p memristor_simple PARAMS: R=33161.105957670115
+Xmem10_08 er08 er14n memristor_simple PARAMS: R=55313.288554357874
+Xmem10_09 er08 er14p memristor_simple PARAMS: R=25976.91607853118
+Xmem10_10 er08 er15n memristor_simple PARAMS: R=48011.30106576429
+Xmem10_11 er08 er15p memristor_simple PARAMS: R=144369.7333188041
+Xmem10_12 er08 er16n memristor_simple PARAMS: R=2296.5164502511566
+Xmem10_13 er08 er16p memristor_simple PARAMS: R=94166.60412686672
+Xmem10_14 er08 er17n memristor_simple PARAMS: R=49068.18676558625
+Xmem10_15 er08 er17p memristor_simple PARAMS: R=94753.59683426331
+Xmem10_16 er08 er18n memristor_simple PARAMS: R=191453.85106740985
+Xmem10_17 er08 er18p memristor_simple PARAMS: R=181474.98265037962
+
+Xmem11_00 er07 er10n memristor_simple PARAMS: R=104900.82467852923
+Xmem11_01 er07 er10p memristor_simple PARAMS: R=168223.53210635693
+Xmem11_02 er07 er11n memristor_simple PARAMS: R=145158.20288388807
+Xmem11_03 er07 er11p memristor_simple PARAMS: R=118090.48527034707
+Xmem11_04 er07 er12n memristor_simple PARAMS: R=80008.84635933425
+Xmem11_05 er07 er12p memristor_simple PARAMS: R=123257.40424065618
+Xmem11_06 er07 er13n memristor_simple PARAMS: R=161762.7027070712
+Xmem11_07 er07 er13p memristor_simple PARAMS: R=110784.38769983286
+Xmem11_08 er07 er14n memristor_simple PARAMS: R=23317.396331707805
+Xmem11_09 er07 er14p memristor_simple PARAMS: R=184990.81283702768
+Xmem11_10 er07 er15n memristor_simple PARAMS: R=100216.22113768266
+Xmem11_11 er07 er15p memristor_simple PARAMS: R=135682.4821048229
+Xmem11_12 er07 er16n memristor_simple PARAMS: R=163034.2808302899
+Xmem11_13 er07 er16p memristor_simple PARAMS: R=161122.37301118276
+Xmem11_14 er07 er17n memristor_simple PARAMS: R=123986.58204634205
+Xmem11_15 er07 er17p memristor_simple PARAMS: R=32187.038067820144
+Xmem11_16 er07 er18n memristor_simple PARAMS: R=88011.1989318988
+Xmem11_17 er07 er18p memristor_simple PARAMS: R=169873.8884532867
+
+Xmem12_00 er06 er10n memristor_simple PARAMS: R=196852.66367101765
+Xmem12_01 er06 er10p memristor_simple PARAMS: R=127393.06927625573
+Xmem12_02 er06 er11n memristor_simple PARAMS: R=82409.71674384919
+Xmem12_03 er06 er11p memristor_simple PARAMS: R=84806.62032044353
+Xmem12_04 er06 er12n memristor_simple PARAMS: R=118538.9451062931
+Xmem12_05 er06 er12p memristor_simple PARAMS: R=74457.94464050714
+Xmem12_06 er06 er13n memristor_simple PARAMS: R=196255.13374003224
+Xmem12_07 er06 er13p memristor_simple PARAMS: R=186140.2679060938
+Xmem12_08 er06 er14n memristor_simple PARAMS: R=20224.107816658045
+Xmem12_09 er06 er14p memristor_simple PARAMS: R=105946.66960020302
+Xmem12_10 er06 er15n memristor_simple PARAMS: R=184878.3108940929
+Xmem12_11 er06 er15p memristor_simple PARAMS: R=122328.83562319716
+Xmem12_12 er06 er16n memristor_simple PARAMS: R=112478.28964707369
+Xmem12_13 er06 er16p memristor_simple PARAMS: R=125847.14964510487
+Xmem12_14 er06 er17n memristor_simple PARAMS: R=144294.4833730913
+Xmem12_15 er06 er17p memristor_simple PARAMS: R=59302.488765420305
+Xmem12_16 er06 er18n memristor_simple PARAMS: R=167117.03193600362
+Xmem12_17 er06 er18p memristor_simple PARAMS: R=78150.0631625533
+
+Xmem13_00 er05 er10n memristor_simple PARAMS: R=94424.97635912852
+Xmem13_01 er05 er10p memristor_simple PARAMS: R=74582.69220988482
+Xmem13_02 er05 er11n memristor_simple PARAMS: R=8083.138023726946
+Xmem13_03 er05 er11p memristor_simple PARAMS: R=70091.50001197305
+Xmem13_04 er05 er12n memristor_simple PARAMS: R=119294.19953746704
+Xmem13_05 er05 er12p memristor_simple PARAMS: R=127389.6288030789
+Xmem13_06 er05 er13n memristor_simple PARAMS: R=183769.65059291682
+Xmem13_07 er05 er13p memristor_simple PARAMS: R=86522.19322515259
+Xmem13_08 er05 er14n memristor_simple PARAMS: R=74858.8890783491
+Xmem13_09 er05 er14p memristor_simple PARAMS: R=25126.28438404721
+Xmem13_10 er05 er15n memristor_simple PARAMS: R=1474.3435352857637
+Xmem13_11 er05 er15p memristor_simple PARAMS: R=152001.52566358895
+Xmem13_12 er05 er16n memristor_simple PARAMS: R=89645.4270345605
+Xmem13_13 er05 er16p memristor_simple PARAMS: R=90561.79789022397
+Xmem13_14 er05 er17n memristor_simple PARAMS: R=105671.97350362208
+Xmem13_15 er05 er17p memristor_simple PARAMS: R=50627.6940883109
+Xmem13_16 er05 er18n memristor_simple PARAMS: R=17947.55602065132
+Xmem13_17 er05 er18p memristor_simple PARAMS: R=18660.62461710898
+
+Xmem14_00 er04 er10n memristor_simple PARAMS: R=119321.09053109011
+Xmem14_01 er04 er10p memristor_simple PARAMS: R=46475.18114870962
+Xmem14_02 er04 er11n memristor_simple PARAMS: R=90718.82317580719
+Xmem14_03 er04 er11p memristor_simple PARAMS: R=48244.964024353285
+Xmem14_04 er04 er12n memristor_simple PARAMS: R=121305.18392733397
+Xmem14_05 er04 er12p memristor_simple PARAMS: R=135111.1781624238
+Xmem14_06 er04 er13n memristor_simple PARAMS: R=187930.84453506794
+Xmem14_07 er04 er13p memristor_simple PARAMS: R=66928.41875711262
+Xmem14_08 er04 er14n memristor_simple PARAMS: R=55758.2556943432
+Xmem14_09 er04 er14p memristor_simple PARAMS: R=2979.5280011574764
+Xmem14_10 er04 er15n memristor_simple PARAMS: R=10628.559500693776
+Xmem14_11 er04 er15p memristor_simple PARAMS: R=190693.12224749997
+Xmem14_12 er04 er16n memristor_simple PARAMS: R=108513.31073636167
+Xmem14_13 er04 er16p memristor_simple PARAMS: R=118768.01329068284
+Xmem14_14 er04 er17n memristor_simple PARAMS: R=5763.510716439621
+Xmem14_15 er04 er17p memristor_simple PARAMS: R=94566.25174271148
+Xmem14_16 er04 er18n memristor_simple PARAMS: R=192112.44582972504
+Xmem14_17 er04 er18p memristor_simple PARAMS: R=171144.75327699297
+
+Xmem15_00 er03 er10n memristor_simple PARAMS: R=90872.02272030652
+Xmem15_01 er03 er10p memristor_simple PARAMS: R=12021.55656328793
+Xmem15_02 er03 er11n memristor_simple PARAMS: R=63367.93706206719
+Xmem15_03 er03 er11p memristor_simple PARAMS: R=165906.9726411556
+Xmem15_04 er03 er12n memristor_simple PARAMS: R=163578.82249818748
+Xmem15_05 er03 er12p memristor_simple PARAMS: R=101029.89955052092
+Xmem15_06 er03 er13n memristor_simple PARAMS: R=60872.83563778009
+Xmem15_07 er03 er13p memristor_simple PARAMS: R=35845.8969501472
+Xmem15_08 er03 er14n memristor_simple PARAMS: R=79223.55899197816
+Xmem15_09 er03 er14p memristor_simple PARAMS: R=46676.57894966007
+Xmem15_10 er03 er15n memristor_simple PARAMS: R=63387.49358985684
+Xmem15_11 er03 er15p memristor_simple PARAMS: R=2695.6057357928094
+Xmem15_12 er03 er16n memristor_simple PARAMS: R=196192.10269021426
+Xmem15_13 er03 er16p memristor_simple PARAMS: R=124254.0082428207
+Xmem15_14 er03 er17n memristor_simple PARAMS: R=34512.96545219637
+Xmem15_15 er03 er17p memristor_simple PARAMS: R=148242.67830803574
+Xmem15_16 er03 er18n memristor_simple PARAMS: R=181680.5138266605
+Xmem15_17 er03 er18p memristor_simple PARAMS: R=23138.87893298161
+
+Xmem16_00 er02 er10n memristor_simple PARAMS: R=82305.33876663864
+Xmem16_01 er02 er10p memristor_simple PARAMS: R=156408.14188010053
+Xmem16_02 er02 er11n memristor_simple PARAMS: R=86592.14083768472
+Xmem16_03 er02 er11p memristor_simple PARAMS: R=75715.90358929937
+Xmem16_04 er02 er12n memristor_simple PARAMS: R=160087.46535053258
+Xmem16_05 er02 er12p memristor_simple PARAMS: R=70955.52464075125
+Xmem16_06 er02 er13n memristor_simple PARAMS: R=49770.01811713147
+Xmem16_07 er02 er13p memristor_simple PARAMS: R=65360.16642981638
+Xmem16_08 er02 er14n memristor_simple PARAMS: R=62207.94372570587
+Xmem16_09 er02 er14p memristor_simple PARAMS: R=82232.12631527733
+Xmem16_10 er02 er15n memristor_simple PARAMS: R=66362.7640198514
+Xmem16_11 er02 er15p memristor_simple PARAMS: R=185654.50038573917
+Xmem16_12 er02 er16n memristor_simple PARAMS: R=69912.84045344975
+Xmem16_13 er02 er16p memristor_simple PARAMS: R=15937.119385542102
+Xmem16_14 er02 er17n memristor_simple PARAMS: R=178212.88124223883
+Xmem16_15 er02 er17p memristor_simple PARAMS: R=162151.46293738633
+Xmem16_16 er02 er18n memristor_simple PARAMS: R=108008.31241257148
+Xmem16_17 er02 er18p memristor_simple PARAMS: R=86995.5601162806
+
+Xmem17_00 er01 er10n memristor_simple PARAMS: R=106008.7851015779
+Xmem17_01 er01 er10p memristor_simple PARAMS: R=21685.215032753887
+Xmem17_02 er01 er11n memristor_simple PARAMS: R=110012.93128419221
+Xmem17_03 er01 er11p memristor_simple PARAMS: R=136510.6360646748
+Xmem17_04 er01 er12n memristor_simple PARAMS: R=77387.63339110637
+Xmem17_05 er01 er12p memristor_simple PARAMS: R=184293.95079771124
+Xmem17_06 er01 er13n memristor_simple PARAMS: R=13862.056826900822
+Xmem17_07 er01 er13p memristor_simple PARAMS: R=70663.96566798711
+Xmem17_08 er01 er14n memristor_simple PARAMS: R=174736.7865113844
+Xmem17_09 er01 er14p memristor_simple PARAMS: R=95011.63385345064
+Xmem17_10 er01 er15n memristor_simple PARAMS: R=46874.01842423881
+Xmem17_11 er01 er15p memristor_simple PARAMS: R=191275.22241251948
+Xmem17_12 er01 er16n memristor_simple PARAMS: R=108487.134885807
+Xmem17_13 er01 er16p memristor_simple PARAMS: R=7213.622990227532
+Xmem17_14 er01 er17n memristor_simple PARAMS: R=70302.35910175265
+Xmem17_15 er01 er17p memristor_simple PARAMS: R=18376.39374322537
+Xmem17_16 er01 er18n memristor_simple PARAMS: R=170291.5047165845
+Xmem17_17 er01 er18p memristor_simple PARAMS: R=82689.59140145262
+
+Xmem18_00 er00 er10n memristor_simple PARAMS: R=131215.39313963268
+Xmem18_01 er00 er10p memristor_simple PARAMS: R=115400.8339284546
+Xmem18_02 er00 er11n memristor_simple PARAMS: R=123886.9820418839
+Xmem18_03 er00 er11p memristor_simple PARAMS: R=180832.7980368357
+Xmem18_04 er00 er12n memristor_simple PARAMS: R=144000.71934050202
+Xmem18_05 er00 er12p memristor_simple PARAMS: R=125010.26374540855
+Xmem18_06 er00 er13n memristor_simple PARAMS: R=75774.97627629788
+Xmem18_07 er00 er13p memristor_simple PARAMS: R=199444.65895829644
+Xmem18_08 er00 er14n memristor_simple PARAMS: R=4845.14245441721
+Xmem18_09 er00 er14p memristor_simple PARAMS: R=64849.55134410859
+Xmem18_10 er00 er15n memristor_simple PARAMS: R=57306.274593489514
+Xmem18_11 er00 er15p memristor_simple PARAMS: R=186570.73396031358
+Xmem18_12 er00 er16n memristor_simple PARAMS: R=102775.86900984513
+Xmem18_13 er00 er16p memristor_simple PARAMS: R=181344.24862018166
+Xmem18_14 er00 er17n memristor_simple PARAMS: R=10356.739289276591
+Xmem18_15 er00 er17p memristor_simple PARAMS: R=134489.10109022897
+Xmem18_16 er00 er18n memristor_simple PARAMS: R=172320.89801194184
+Xmem18_17 er00 er18p memristor_simple PARAMS: R=12824.233122144327
+
+Xmem19_00 bias1 er10n memristor_simple PARAMS: R=57845.05372150996
+Xmem19_01 bias1 er10p memristor_simple PARAMS: R=79094.86770910659
+Xmem19_02 bias1 er11n memristor_simple PARAMS: R=172223.33105224502
+Xmem19_03 bias1 er11p memristor_simple PARAMS: R=41043.46650628048
+Xmem19_04 bias1 er12n memristor_simple PARAMS: R=40275.116535466026
+Xmem19_05 bias1 er12p memristor_simple PARAMS: R=34049.02589947851
+Xmem19_06 bias1 er13n memristor_simple PARAMS: R=196734.23005734777
+Xmem19_07 bias1 er13p memristor_simple PARAMS: R=193242.15205571774
+Xmem19_08 bias1 er14n memristor_simple PARAMS: R=36002.56157155903
+Xmem19_09 bias1 er14p memristor_simple PARAMS: R=132005.16300441377
+Xmem19_10 bias1 er15n memristor_simple PARAMS: R=143196.27418305044
+Xmem19_11 bias1 er15p memristor_simple PARAMS: R=84364.62274880982
+Xmem19_12 bias1 er16n memristor_simple PARAMS: R=180407.09509722338
+Xmem19_13 bias1 er16p memristor_simple PARAMS: R=22578.877219575475
+Xmem19_14 bias1 er17n memristor_simple PARAMS: R=52487.235444786325
+Xmem19_15 bias1 er17p memristor_simple PARAMS: R=81242.76749153911
+Xmem19_16 bias1 er18n memristor_simple PARAMS: R=121869.54414944972
+Xmem19_17 bias1 er18p memristor_simple PARAMS: R=139913.22435384928
+
+Xdiff10 er10n er10p 0.5 -0.5 out00 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff11 er11n er11p 0.5 -0.5 out01 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff12 er12n er12p 0.5 -0.5 out02 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff13 er13n er13p 0.5 -0.5 out03 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff14 er14n er14p 0.5 -0.5 out04 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff15 er15n er15p 0.5 -0.5 out05 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff16 er16n er16p 0.5 -0.5 out06 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff17 er17n er17p 0.5 -0.5 out07 diff_sub PARAMS: Ra=1k Rb=1k
+Xdiff18 er18n er18p 0.5 -0.5 out08 diff_sub PARAMS: Ra=1k Rb=1k
+
+.tran 0 1000n 1n
